@@ -7,7 +7,7 @@ import org.junit.Test;
 public class ValidateISBNTest {
 
 	@Test
-	public void checkValidISBN() {
+	public void checkValid10DigitISBN() {
 		ValidateISBN validator = new ValidateISBN();
 		boolean result = validator.checkISBN("0140449116");
 		assertTrue("first value",result);
@@ -25,14 +25,14 @@ public class ValidateISBNTest {
 	}
 	
 	@Test
-	public void IsbnEndingWithXIsValid() {
+	public void TenDigitIsbnEndingWithXIsValid() {
 		ValidateISBN validator = new ValidateISBN();
 		boolean result = validator.checkISBN("012000030X");
 		assertTrue(result);
 	}
 	
 	@Test
-	public void checkInValidISBN() {
+	public void checkInValid10DigitISBN() {
 		ValidateISBN validator = new ValidateISBN();
 		boolean result = validator.checkISBN("0140449117");
 		assertFalse(result);
