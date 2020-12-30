@@ -30,6 +30,7 @@ public class ValidateISBNTest {
 	
 	@Test(expected = NumberFormatException.class)
 	public void nonNumericIsbnNumberNotAllowed() {
-		fail();
+		ValidateISBN validator = new ValidateISBN();
+		validator.checkISBN("helloWorld");
 	}
 }
