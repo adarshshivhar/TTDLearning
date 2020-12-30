@@ -19,7 +19,9 @@ public class ValidateISBNTest {
 	public void checkValid13DigitISBN() {
 		ValidateISBN validator = new ValidateISBN();
 		boolean result = validator.checkISBN("9781853260087");
-		assertTrue(result);
+		assertTrue("first value",result);
+		result = validator.checkISBN("9781853267338");
+		assertTrue("second value",result);
 	}
 	
 	@Test
