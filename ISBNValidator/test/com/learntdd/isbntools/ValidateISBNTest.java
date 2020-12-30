@@ -22,9 +22,10 @@ public class ValidateISBNTest {
 		assertFalse(result);
 	}
 	
-	@Test
+	@Test(expected = NumberFormatException.class)
 	public void nineDigitIsbnNumberNotAllowed() {
-		fail();
+		ValidateISBN validator = new ValidateISBN();
+		validator.checkISBN("123456789");
 	}
 
 }
