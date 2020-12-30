@@ -12,13 +12,14 @@ public class ValidateISBN {
 		if(isbn.length() == LONG_ISBN_LENGTH) {
 			
 			return isThisALongISBN(isbn);
-			
-		}else {
-			if(isbn.length() != SHORT_ISBN_LENGTH) throw new NumberFormatException("ISBN Number must be 10 digits long");
+		
+		}else if(isbn.length() == SHORT_ISBN_LENGTH){
 			
 			return isThisAShortISBN(isbn);
+		
 		}
 		
+		throw new NumberFormatException("ISBN Number must be 10 or 13 digits long");
 	}
 
 	private boolean isThisAShortISBN(String isbn) {
@@ -43,11 +44,7 @@ public class ValidateISBN {
 			
 		}
 		
-		if(total % SHORT_ISBN_MULTIPLIER == 0) {
-			return true;
-		}else {
-			return false;
-		}
+		return (total % SHORT_ISBN_MULTIPLIER == 0); 
 	}
 
 	private boolean isThisALongISBN(String isbn) {
@@ -60,11 +57,7 @@ public class ValidateISBN {
 			}
 		}
 		
-		if(total % LONG_ISBN_MULTIPLIER == 0) {
-			return true;
-		}else {
-			return false;
-		}
+		return (total % LONG_ISBN_MULTIPLIER == 0); 
 	}
 
 }
