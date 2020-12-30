@@ -8,7 +8,9 @@ public class ValidateISBNTest {
 
 	@Test
 	public void checkValidISBN() {
-		fail();
+		ValidateISBN validator = new ValidateISBN();
+		boolean result = validator.checkISBN(140449116);
+		assertTrue(result);
 	}
 
 }
