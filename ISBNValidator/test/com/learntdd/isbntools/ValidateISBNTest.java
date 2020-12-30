@@ -17,7 +17,9 @@ public class ValidateISBNTest {
 	
 	@Test
 	public void IsbnEndingWithXIsValid() {
-		fail();
+		ValidateISBN validator = new ValidateISBN();
+		boolean result = validator.checkISBN("012000030X");
+		assertTrue(result);
 	}
 	
 	@Test
