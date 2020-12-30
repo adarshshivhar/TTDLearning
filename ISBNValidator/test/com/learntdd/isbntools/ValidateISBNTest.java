@@ -41,9 +41,8 @@ public class ValidateISBNTest {
 	@Test
 	public void checkInValid13DigitISBN() {
 		ValidateISBN validator = new ValidateISBN();
-		boolean result = validator.checkISBN("9781853267338");
+		boolean result = validator.checkISBN("9781853267336");
 		assertFalse(result);
-		fail();
 	}
 	
 	@Test(expected = NumberFormatException.class)
