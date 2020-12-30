@@ -16,6 +16,11 @@ public class ValidateISBNTest {
 	}
 	
 	@Test
+	public void checkValid13DigitISBN() {
+		fail();
+	}
+	
+	@Test
 	public void IsbnEndingWithXIsValid() {
 		ValidateISBN validator = new ValidateISBN();
 		boolean result = validator.checkISBN("012000030X");
